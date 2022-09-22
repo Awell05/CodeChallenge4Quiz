@@ -1,12 +1,15 @@
 # CodeChallenge4Quiz
-user needs to click start button
-a timer starts when a question is presented
-after the questions is answered 
-another question is presneted
-if the answer is incorrect time is substracted from the clock
-if the timer reaches 0 or all questions are answered
-the game is over
-initils and scare are saved to local storage
+user needs to click start button- COMPLETED
+a timer starts (COMPLETED) AND a question is presented
+WHEN the correct answer is clicked
+the next question appears
+WHEN the incorrect answer is clicked
+10 seconds is substracted from the timer
+WHEN the timer = 0 OR all questions are answered, the quiz is over
+when the quiz is over their score should display and the user should input their initials & submit their initials and 
+the initials should save
+if the user completes the quiz again, each score and initial should be stored and displayed.
+
 
 
 answer choices should be button with on click 

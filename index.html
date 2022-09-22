@@ -10,30 +10,36 @@
   <body>
     <!-- Intro Page to Quiz -->
     <p>View Highscores</p> <p id="timer">Timer</p>
-    <h1>Coding Quiz Challenge</h1>
-    <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score and time by ten seconds!</p>
-    <button id="startButton"> Start Quiz </button>
+    <div id="starter">
+      <h1>Coding Quiz Challenge</h1>
+      <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score and time by ten seconds!</p>
+      <button id="startButton"> Start Quiz </button>
+    </div>
     <!-- Question 1 -->
-    <h2>Commonly used data types DO NOT include:</h2>
-      <button> strings </button>
-      <button> booleans </button>
-      <button> alerts </button> 
-      <button> numbers </button>
+    <div id="quiz-holder" class="hidden">
+      <h2 id ="question-holder">Commonly used data types DO NOT include:</h2>
+        <div id="answer-holder">
+          <button> strings </button>
+          <button> booleans </button>
+          <button> alerts </button> 
+          <button> numbers </button>
+        </div>
+    </div>
     <!-- Question 2 -->
-    <h2>String Values must be enclosed within ____ when being assigned to variables. </h2>
+    <!-- <h2>String Values must be enclosed within ____ when being assigned to variables. </h2>
       <button> commas </button>
       <button>curly brackets</button>
       <button>quotes</button>
-      <button>parentheses</button>
+      <button>parentheses</button> -->
     <!-- Question 3 -->
-    <h2>Arrays in Javascript can be used to store _____. </h2>
+    <!-- <h2>Arrays in Javascript can be used to store _____. </h2>
       <button>  numbers and strings </button>
-      <!-- correct answer below -->
+      correct answer below
       <button >other arrays</button> 
       <button>booleans</button>
-      <button>all of the above</button>
+      <button>all of the above</button> -->
     <!-- Question 4 -->
-    <h2>A very useful tool used during development and debugging for printing conent to the debugger is: </h2>
+    <!-- <h2>A very useful tool used during development and debugging for printing conent to the debugger is: </h2>
       <button>Javascript</button>
       <button>terminal/bash</button>
       <button>for loops</button>
@@ -42,7 +48,7 @@
       <button>Javascript</button>
       <button>terminal/bash</button>
       <button>for loops</button>
-      <button> console.log </button>
+      <button> console.log </button> -->
 <h2> All Done!</h2>
 <form action="/action_page.php">
   <label for="initials">Enter Initials</label>

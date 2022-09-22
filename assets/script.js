@@ -33,6 +33,7 @@ console.log(questionsArray);
         timerPTag.textContent = " Timer " + timerToCompleteQuiz;
         if (timerToCompleteQuiz === 0) {
             clearInterval(timerfunction);
+            endQuiz()
         }
     }, 1000);
     startQuiz()
@@ -65,4 +66,30 @@ function checkIfCorrect(event){
     event.preventDefault()
     console.log("triggered")
     console.log(event.target.innerHTML)
+    if(!answer is not correct){
+        timerToCompleteQuiz -= 10
+    }
+
+
+    var isDone = checkifQuizOver()
+    // you will need to check if you're done with the quiz
+    if (!isDone){
+        currentQuestionIndex ++
+        displayQuestion()
+    } else{
+        endQuiz()
+    }
+    // if you're not done, then move to the next question
+}
+
+function checkifQuizOver(){
+
+console.log("checking if over")
+    //if it's over return true
+    // return false
+}
+
+function endQuiz(){
+    console.log("quiz ended condition met.")
+    //deduct 10 seconds
 }

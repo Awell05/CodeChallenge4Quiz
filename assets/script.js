@@ -13,7 +13,7 @@ var questionsArray = [
     },
     {
         question: "Question 2",
-        answers: ["answer 3", "answer 4", "answer 5"],
+        answers: ["answer 3", "answer 4", "answer 5", "answer 6"],
         correct: "answer 3"
     }
 ]
@@ -21,6 +21,7 @@ var questionsArray = [
 console.log(startQuizButton);
 console.log(timerPTag);
 console.log(timerToCompleteQuiz);
+console.log(questionsArray);
 
 
 // Function to start timer when "start quiz" button is selected
@@ -46,6 +47,22 @@ function startQuiz(){
 }
 function displayQuestion(){
     console.log("displayQuestionfunction")
+    var questionElement = document.getElementById("question-holder")
+    var answersElement = document.getElementById("answer-holder")
+    questionElement.innerHTML= ""
+    answersElement.innerHTML = ""
+    questionElement.innerHTML = questionsArray[currentQuestionIndex].question;
+    for(let i=0; i< questionsArray[currentQuestionIndex].answers.length;i++ ){
+        console.log("in the loop")
+        var button = document.createElement("button")
+        button.innerHTML = questionsArray[currentQuestionIndex].answers[i]
+        answersElement.appendChild(button)
+        button.addEventListener("click", checkIfCorrect)
+    }
 }
 
-
+function checkIfCorrect(event){
+    event.preventDefault()
+    console.log("triggered")
+    console.log(event.target.innerHTML)
+}

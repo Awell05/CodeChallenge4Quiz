@@ -1,20 +1,37 @@
 var startQuizButton = document.querySelector("#startButton");
 var startElement = document.getElementById("starter")
 var quizElement = document.getElementById("quiz-holder")
+var question2Element = document.getElementById("quiz2-holder")
+var buttons = document.getElementsByClassName("ans1")
 var timerPTag = document.querySelector("#timer");
 var timerToCompleteQuiz = 90;
 var currentQuestionIndex = 0
 
 var questionsArray = [
     {
-        question: "Question 1",
-        answers: ["answer 1", "answer 2", "answer 3"],
-        correct: "answer 1"
+        question: "Commonly used data types DO NOT include:",
+        answers: ["strings","booleans", "alerts", "numbers"],
+        correct: "alerts",
     },
     {
-        question: "Question 2",
-        answers: ["answer 3", "answer 4", "answer 5", "answer 6"],
-        correct: "answer 3"
+        question: "String Values must be enclosed within ____ when being assigned to variables.",
+        answers: ["commas", "curly brackets", "quotes", "parentheses"],
+        correct: "quotes",
+    },
+    {   
+        question:"Arrays in Javascript can be used to store _____.",
+        answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        correct: "other arrays",
+    },
+    {
+        question:"A very useful tool used during development and debugging for printing content to the debugger is:",
+        answers: ["Javascript", "terminal/bash", "for loops", "console.log"],
+        correct: "console.log",
+    },
+    {
+        question:"Jquery is considered a:",
+        answers:["web-api", "function", "stylesheet", "element"],
+        correct: "web-api",
     }
 ]
 
@@ -40,11 +57,10 @@ console.log(questionsArray);
 });
 
 function startQuiz(){
-    console.log("startQuizFunction")
+    console.log("the quiz has started")
     startElement.style.display = "none"
     quizElement.classList.remove("hidden")
     displayQuestion()
-
 }
 function displayQuestion(){
     console.log("displayQuestionfunction")
@@ -66,7 +82,8 @@ function checkIfCorrect(event){
     event.preventDefault()
     console.log("triggered")
     console.log(event.target.innerHTML)
-    if(!answer is not correct){
+    if(!questionsArray[currentQuestionIndex.correct]){
+        console.log("YOU GOT THE BUTTONS TO WORK")
         timerToCompleteQuiz -= 10
     }
 
@@ -93,3 +110,118 @@ function endQuiz(){
     console.log("quiz ended condition met.")
     //deduct 10 seconds
 }
+                    
+                    // if(event.target.innerHTML === questionsArray[0].answers[2]){
+                    //     console.log("correct answer");
+                    //     var answersElement = document.getElementById("answer-holder")
+                    //     var correctAnswer = document.createTextNode(" Correct Answer! ")
+                    //     answersElement.appendChild(correctAnswer);}
+                    //     else if (event.target.innerHTML != questionsArray[0].answers[2]){
+                    //         console.log("wrong answer")
+                    //             timerToCompleteQuiz -= 10;
+                    //             var answersElement = document.getElementById("answer-holder")
+                    //             var wrongAnswer = document.createTextNode("Wrong Answer")
+                    //             answersElement.appendChild(wrongAnswer);}}
+                    //             displayQuestion()
+
+
+
+
+
+
+
+
+
+// Displays Question 1
+// function displayQuestion(){
+//     console.log("displayingQuestion1")
+//     var questionElement = document.getElementById("question-holder")
+//     var answersElement = document.querySelector(".ans1")
+    
+//     questionElement.innerHTML= ""
+//     answersElement.innerHTML = ""
+//     questionElement.innerHTML = questionsArray[currentQuestionIndex].question;
+//     for(let i=0; i< questionsArray[currentQuestionIndex].answers.length;i++){
+//         console.log("in the loop")
+//         buttons[i].innerHTML = questionsArray[currentQuestionIndex].answers[i]
+//         buttons.addEventListener("click", checkIfCorrect)
+//     }
+// }
+// Checks if Answer 1 is Correct
+// function checkIfCorrect(event){
+//     event.preventDefault()
+//     console.log("triggered")
+//     console.log(event.target.innerHTML)
+//     if(event.target.innerHTML === questionsArray[0].answers[2]){
+//         console.log("correct answer");
+//         var answersElement = document.getElementById("answer-holder")
+//         var correctAnswer = document.createTextNode(" Correct Answer! ")
+//         answersElement.appendChild(correctAnswer);}
+//         else if (event.target.innerHTML != questionsArray[0].answers[2]){
+//             console.log("wrong answer")
+//                 timerToCompleteQuiz -= 10;
+//                 var answersElement = document.getElementById("answer-holder")
+//                 var wrongAnswer = document.createTextNode("Wrong Answer")
+//                 answersElement.appendChild(wrongAnswer);}}
+                // displayQuestion()
+    
+    // need to increase increment based on user get correct-increament global index
+
+    
+    
+    //     }
+    // //     // Displays Question 2
+    //     function displayQuestion2(){
+    //         console.log("displaying question 2")
+    //         quizElement.style.display = "none"
+    //         question2Element.classList.remove("hidden")
+    //        var answer2Element = document.getElementById("answer2-holder")
+    //         console.log(answer2Element)
+           
+        
+
+
+
+
+
+
+        //     var question2Element = document.getElementById("quiz2-holder")
+        //     var answers2Element = document.querySelector("answer2-holder")
+        //     question2Element.innerHTML= ""
+        //     answers2Element.innerHTML = ""
+        //     question2Element.innerHTML = questionsArray[1].question;
+        // for(let i=0; i< questionsArray[1].answers.length;i++ ){
+        // console.log("in the loop")}
+        // var button = document.createElement("button")
+        // button.innerHTML = questionsArray[currentQuestionIndex].answers[i]
+        // answers2Element.appendChild(button)
+        // button.addEventListener("click", checkIfQ2Correct);
+        // }
+
+    //     function checkIfQ2Correct(event){
+    //         console.log("triggered from q2 ")
+    //        console.log(event.trigger.innerHTML);
+    //     }
+    // }
+//     var isDone = checkifQuizOver()
+//     // you will need to check if you're done with the quiz
+//     if (!isDone){
+//         currentQuestionIndex ++
+//         displayQuestion()
+//     } else{
+//         endQuiz()
+//     }
+//     // if you're not done, then move to the next question
+// }
+
+// function checkifQuizOver(){
+
+// console.log("checking if over")
+//     //if it's over return true
+//     // return false
+// }
+
+// function endQuiz(){
+//     console.log("quiz ended condition met.")
+//     //deduct 10 seconds
+//

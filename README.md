@@ -1,6 +1,6 @@
 # CodeChallenge4Quiz
 user needs to click start button- COMPLETED
-a timer starts (COMPLETED) AND a question is presented
+a timer starts (COMPLETED) AND a question is presented (COMPLETED)
 WHEN the correct answer is clicked
 the next question appears
 WHEN the incorrect answer is clicked

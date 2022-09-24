@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Code 4 Challenge</title>
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
-  <body>
-    <!-- Intro Page to Quiz -->
-    <p>View Highscores</p> <p id="timer">Timer</p>
-    <div id="starter">
-      <h1>Coding Quiz Challenge</h1>
-      <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score and time by ten seconds!</p>
-      <button id="startButton"> Start Quiz </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Code 4 Challenge</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <!-- Intro Page to Quiz -->
+  <p>View Highscores</p>
+  <p id="timer">Timer</p>
+  <div id="starter">
+    <h1>Coding Quiz Challenge</h1>
+    <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your
+      score and time by ten seconds!</p>
+    <button id="startButton"> Start Quiz </button>
+  </div>
+  <!-- Question 1 -->
+  <div id="quiz-holder" class="hidden">
+    <h2 id="question-holder">Commonly used data types DO NOT include:</h2>
+    <div id="answer-holder">
+      <button class ="ans1"> strings </button>
+      <button class ="ans1"> booleans </button>
+      <button class ="ans1"> alerts </button>
+      <button class ="ans1"> numbers </button>
     </div>
-    <!-- Question 1 -->
-    <div id="quiz-holder" class="hidden">
-      <h2 id ="question-holder">Commonly used data types DO NOT include:</h2>
-        <div id="answer-holder">
-          <button> strings </button>
-          <button> booleans </button>
-          <button> alerts </button> 
-          <button> numbers </button>
-        </div>
+  </div>
+  <!-- Question 2 -->
+  <div id="quiz2-holder" class="hidden">
+    <h2 id="questions2-holder"> String Values must be enclosed within ____ when being assigned to variables. </h2>
+      <div id="answer2-holder">
+        <button> commas </button>
+        <button>curly brackets</button>
+        <button>quotes</button>
+        <button>parentheses</button>
+      </div>
+  </div>
+  <!-- Question 3 -->
+  <div  id="quiz3-holder" class="hidden">
+    <h2 id="question-holder">Arrays in Javascript can be used to store _____. </h2>
+      <div id="answer3-holder">
+        <button> numbers and strings </button>
+          <!-- correct answer below -->
+        <button>other arrays</button>
+        <button>booleans</button>
+        <button>all of the above</button>
     </div>
-    <!-- Question 2 -->
-    <!-- <h2>String Values must be enclosed within ____ when being assigned to variables. </h2>
-      <button> commas </button>
-      <button>curly brackets</button>
-      <button>quotes</button>
-      <button>parentheses</button> -->
-    <!-- Question 3 -->
-    <!-- <h2>Arrays in Javascript can be used to store _____. </h2>
-      <button>  numbers and strings </button>
-      correct answer below
-      <button >other arrays</button> 
-      <button>booleans</button>
-      <button>all of the above</button> -->
-    <!-- Question 4 -->
-    <!-- <h2>A very useful tool used during development and debugging for printing conent to the debugger is: </h2>
-      <button>Javascript</button>
-      <button>terminal/bash</button>
-      <button>for loops</button>
-      <button> console.log </button>
-    <h2>A very useful tool used during development and debugging for printing conent to the debugger is: </h2>
-      <button>Javascript</button>
-      <button>terminal/bash</button>
-      <button>for loops</button>
-      <button> console.log </button> -->
-<h2> All Done!</h2>
-<form action="/action_page.php">
-  <label for="initials">Enter Initials</label>
-  <input type="text" id="initials" name="initials"> <input type="submit" value="Submit">
-</form>
-<h2> Highscores</h2>
-<button> Go Back </button> <button> Clear Highscores</button>
-<script src="./assets/script.js"></script>
+  </div>
+ <!-- Question 4 -->
+  <div id="quiz4-holder" class="hidden">
+    <h2 id="question4-holder">A very useful tool used during development and debugging for printing content to the debugger is: </h2>
+      <div class="answer4-holder">
+        <button>Javascript</button>
+        <button>terminal/bash</button>
+        <button>for loops</button>
+        <button> console.log </button>
+      </div>
+  </div>
+ <!-- Question 5 --> 
+<div id="quiz5-holder" class="hidden">
+    <h2 id="question5-holder">Jquery is considered a: </h2>
+      <div id="answer5-holder">
+        <button>web-api</button>
+        <button>function</button>
+        <button>stylesheet</button>
+        <button> element </button>
+    </div> 
+    <!-- Completed Quiz Page -->
+  </div> 
+  <div class="hidden">
+    <h2> All Done!</h2>
+      <form action="/action_page.php">
+        <label for="initials">Enter Initials</label>
+        <input type="text" id="initials" name="initials"> <input type="submit" value="Submit">
+      </form>
+    <h2> Highscores</h2>
+        <button> Go Back </button> <button> Clear Highscores</button>
+</div>
+
+
+  <script src="./assets/script.js"></script>
 </body>
-  </html>
+
+</html>

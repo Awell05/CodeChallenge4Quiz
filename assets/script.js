@@ -112,9 +112,11 @@ function checkIfCorrect(event){
     }
     // if you're not done, then move to the next question
 
-function checkIfQuizOver(event){
+function checkIfQuizOver(){
 console.log("checking if over")
-
+ if (currentQuestionIndex <5){
+    currentQuestionIndex++
+ }
 }
     //if it's over return true
     // return false
@@ -122,5 +124,5 @@ console.log("checking if over")
 function endQuiz(){
     console.log("quiz ended condition met.")
     
-    //deduct 10 seconds
+    
 }

@@ -7,7 +7,8 @@ var timerPTag = document.querySelector("#timer");
 var allDone = document.getElementById("quiz-finished")
 var timerToCompleteQuiz = 50;
 var currentQuestionIndex = 0
-
+var instructions = document.getElementById("instruction")
+var header1 = document.getElementById("header")
 
 var questionsArray = [
     {
@@ -45,6 +46,9 @@ console.log(questionsArray);
 
 // Function to start timer when "start quiz" button is selected
 // need to add when incorrect answer is selected, 10-15 seconds are deducted from current time
+header1.setAttribute("style", "position: relative; left: 35%;")
+instructions.setAttribute("style", "position: relative; left: 15%")
+startQuizButton.setAttribute("style", "background-color: purple; color: white; border: solid purple; border-radius: 8px; position: relative; left: 40%;")
 startQuizButton.addEventListener('click', function countdown() {
     console.log('timer should begin');
     var timerfunction = setInterval(function () {
@@ -76,6 +80,7 @@ function displayQuestion() {
         var button = document.createElement("button")
         button.innerHTML = questionsArray[currentQuestionIndex].answers[i]
         answersElement.appendChild(button)
+        button.setAttribute("style", "background-color: purple; color:white; border: solid purple; border-radius: 8px; ")
         button.addEventListener("click", checkIfCorrect)
     }
 

@@ -4,6 +4,7 @@ var quizElement = document.getElementById("quiz-holder")
 var question2Element = document.getElementById("quiz2-holder")
 var buttons = document.getElementsByClassName("ans1")
 var timerPTag = document.querySelector("#timer");
+var allDone = document.getElementById("quiz-finished")
 var timerToCompleteQuiz = 90;
 var currentQuestionIndex = 0
 
@@ -101,28 +102,19 @@ function checkIfCorrect(event){
     checkIfQuizOver()
     }
 
-
-    var isDone = checkIfQuizOver()
-    // you will need to check if you're done with the quiz
-    if (!isDone){
-       
-        displayQuestion()
-    } else{
-        endQuiz()
-    }
-    // if you're not done, then move to the next question
-
-function checkIfQuizOver(){
+function checkIfQuizOver(event){
 console.log("checking if over")
- if (currentQuestionIndex <5){
+if (currentQuestionIndex < 4 ){ 
     currentQuestionIndex++
- }
+displayQuestion()
 }
-    //if it's over return true
-    // return false
+//  if (currentQuestionIndex = 4){    
+    else { endQuiz()}
+}
 
 function endQuiz(){
     console.log("quiz ended condition met.")
-    
+  quizElement.classList.add("hidden");
+  allDone.classList.remove("hidden");
     
 }

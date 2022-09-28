@@ -5,11 +5,13 @@ var question2Element = document.getElementById("quiz2-holder")
 var buttons = document.getElementsByClassName("ans1")
 var timerPTag = document.querySelector("#timer");
 var allDone = document.getElementById("quiz-finished")
-var timerToCompleteQuiz = 50;
+var timerToCompleteQuiz = 70;
 var currentQuestionIndex = 0
 var instructions = document.getElementById("instruction")
 var header1 = document.getElementById("header")
+var initials = document.getElementById("initials")
 
+var highScores = [];
 var questionsArray = [
     {
         question: "Commonly used data types DO NOT include:",
@@ -48,6 +50,7 @@ console.log(questionsArray);
 // need to add when incorrect answer is selected, 10-15 seconds are deducted from current time
 header1.setAttribute("style", "position: relative; left: 35%;")
 instructions.setAttribute("style", "position: relative; left: 15%")
+quizElement.setAttribute("style", "position: relative; left: 20%")
 startQuizButton.setAttribute("style", "background-color: purple; color: white; border: solid purple; border-radius: 8px; position: relative; left: 40%;")
 startQuizButton.addEventListener('click', function countdown() {
     console.log('timer should begin');
@@ -114,17 +117,30 @@ function checkIfQuizOver() {
     }
     else {
         endQuiz()
-        setinterval(function(){
-            timerToCompleteQuiz-50
         }
-
-        )
     }
-}
+
 
 function endQuiz() {
     console.log("quiz has ended.")
     quizElement.classList.add("hidden");
     allDone.classList.remove("hidden");
-}
+    var quizScores = {
+        initials: initials.value,
+        score:timerToCompleteQuiz,
+    }
+    localStorage.setItem("quiz-Scores", JSON.stringify(quizScores));
+    // setInterval(function(timerToCompleteQuiz){
+    // )
+    };
 
+
+    // Also need to get quiz timer to set to 0 and not go pass -0. 
+// need to figure out how to get submit button to store items and display on next page. 
+ function sumbitScore ()  { 
+    console.log("You are submitting your scores")
+    var submitQuizScore = document.getElementById("submitbutton")
+    submitQuizScore.value.addEventListener("click", quizScores)
+    
+   
+}
